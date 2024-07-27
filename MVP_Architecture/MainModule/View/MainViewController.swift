@@ -9,25 +9,50 @@ import UIKit
 
 class MainViewController: UIViewController {
     // MARK: - IBOutlet
-    @IBOutlet weak var greetingLabeL: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     var presenter: MainViewPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        overrideUserInterfaceStyle = .light
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     // MARK: - IBAction
-    @IBAction func didTapButton(_ sender: Any) {
-        self.presenter.showGreeting()
-    }
 
 }
 
-extension MainViewController: MainViewProtocol {
-    func setGreeting(greeting: String) {
-        self.greetingLabeL.text = greeting
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.comments?.count ?? 0
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let comments = presenter.comments?[indexPath.row]
+        cell.textLabel?.text = comments?.body
+        return cell
+    }
+    
+    
+}
+
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let comment = presenter.comments?[indexPath.row]
+        let detailViewController = ModuleBuilder.createDetailModule(comment: comment)
+        navigationController?.pushViewController(detailViewController, animated: true)
+    }
+}
+
+extension MainViewController: MainViewProtocol {
+    func success() {
+        tableView.reloadData()
+    }
+    
+    func failure(error: any Error) {
+        print(error.localizedDescription)
+    }
+    
+  
 }
 

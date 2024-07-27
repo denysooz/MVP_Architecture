@@ -15,11 +15,15 @@
 		CD0F7E8C2C5469D7000D3009 /* MVP_ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7E8B2C5469D7000D3009 /* MVP_ArchitectureTests.swift */; };
 		CD0F7E962C5469D7000D3009 /* MVP_ArchitectureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7E952C5469D7000D3009 /* MVP_ArchitectureUITests.swift */; };
 		CD0F7E982C5469D7000D3009 /* MVP_ArchitectureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7E972C5469D7000D3009 /* MVP_ArchitectureUITestsLaunchTests.swift */; };
-		CD0F7EA52C5469FE000D3009 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7EA42C5469FE000D3009 /* Person.swift */; };
+		CD0F7EA52C5469FE000D3009 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7EA42C5469FE000D3009 /* Comment.swift */; };
 		CD0F7EA72C546A20000D3009 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7EA62C546A20000D3009 /* MainPresenter.swift */; };
 		CD0F7EAD2C546CB4000D3009 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD0F7EAC2C546CB4000D3009 /* MainViewController.xib */; };
 		CD0F7EAF2C546D46000D3009 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7EAE2C546D46000D3009 /* ModuleBuilder.swift */; };
 		CD0F7EB22C5470B4000D3009 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0F7EB12C5470B4000D3009 /* MainPresenterTest.swift */; };
+		CDC5EFBD2C549D1C005CE58E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5EFBC2C549D1C005CE58E /* NetworkService.swift */; };
+		CDC5EFC12C54A18D005CE58E /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5EFC02C54A18D005CE58E /* DetailPresenter.swift */; };
+		CDC5EFC72C54A2D8005CE58E /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC5EFC62C54A2D8005CE58E /* DetailViewController.xib */; };
+		CDC5EFC82C54A2D8005CE58E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC5EFC52C54A2D8005CE58E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +57,15 @@
 		CD0F7E912C5469D7000D3009 /* MVP_ArchitectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVP_ArchitectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0F7E952C5469D7000D3009 /* MVP_ArchitectureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_ArchitectureUITests.swift; sourceTree = "<group>"; };
 		CD0F7E972C5469D7000D3009 /* MVP_ArchitectureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_ArchitectureUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CD0F7EA42C5469FE000D3009 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		CD0F7EA42C5469FE000D3009 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		CD0F7EA62C546A20000D3009 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		CD0F7EAC2C546CB4000D3009 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		CD0F7EAE2C546D46000D3009 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		CD0F7EB12C5470B4000D3009 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		CDC5EFBC2C549D1C005CE58E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CDC5EFC02C54A18D005CE58E /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		CDC5EFC52C54A2D8005CE58E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CDC5EFC62C54A2D8005CE58E /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,14 +116,16 @@
 		CD0F7E732C5469D5000D3009 /* MVP_Architecture */ = {
 			isa = PBXGroup;
 			children = (
-				CD0F7EA82C546C71000D3009 /* MainModule */,
 				CD0F7E742C5469D5000D3009 /* AppDelegate.swift */,
-				CD0F7E762C5469D5000D3009 /* SceneDelegate.swift */,
-				CD0F7E7A2C5469D5000D3009 /* Main.storyboard */,
 				CD0F7E7D2C5469D6000D3009 /* Assets.xcassets */,
-				CD0F7E7F2C5469D6000D3009 /* LaunchScreen.storyboard */,
+				CDC5EFC22C54A26A005CE58E /* DetailModule */,
 				CD0F7E822C5469D6000D3009 /* Info.plist */,
+				CD0F7E7F2C5469D6000D3009 /* LaunchScreen.storyboard */,
+				CD0F7E7A2C5469D5000D3009 /* Main.storyboard */,
+				CD0F7EA82C546C71000D3009 /* MainModule */,
 				CD0F7EAE2C546D46000D3009 /* ModuleBuilder.swift */,
+				CD0F7E762C5469D5000D3009 /* SceneDelegate.swift */,
+				CDC5EFBF2C549D2B005CE58E /* ServiceLayer */,
 			);
 			path = MVP_Architecture;
 			sourceTree = "<group>";
@@ -160,7 +170,7 @@
 		CD0F7EAA2C546C88000D3009 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CD0F7EA42C5469FE000D3009 /* Person.swift */,
+				CD0F7EA42C5469FE000D3009 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +189,40 @@
 				CD0F7EB12C5470B4000D3009 /* MainPresenterTest.swift */,
 			);
 			path = TestMainModule;
+			sourceTree = "<group>";
+		};
+		CDC5EFBF2C549D2B005CE58E /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CDC5EFBC2C549D1C005CE58E /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		CDC5EFC22C54A26A005CE58E /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				CDC5EFC42C54A2B6005CE58E /* View */,
+				CDC5EFC32C54A26F005CE58E /* Presenter */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		CDC5EFC32C54A26F005CE58E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CDC5EFC02C54A18D005CE58E /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		CDC5EFC42C54A2B6005CE58E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDC5EFC52C54A2D8005CE58E /* DetailViewController.swift */,
+				CDC5EFC62C54A2D8005CE58E /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +332,7 @@
 				CD0F7E7E2C5469D6000D3009 /* Assets.xcassets in Resources */,
 				CD0F7E7C2C5469D5000D3009 /* Base in Resources */,
 				CD0F7EAD2C546CB4000D3009 /* MainViewController.xib in Resources */,
+				CDC5EFC72C54A2D8005CE58E /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,12 +357,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDC5EFC82C54A2D8005CE58E /* DetailViewController.swift in Sources */,
 				CD0F7E792C5469D5000D3009 /* MainViewController.swift in Sources */,
 				CD0F7E752C5469D5000D3009 /* AppDelegate.swift in Sources */,
-				CD0F7EA52C5469FE000D3009 /* Person.swift in Sources */,
+				CD0F7EA52C5469FE000D3009 /* Comment.swift in Sources */,
+				CDC5EFC12C54A18D005CE58E /* DetailPresenter.swift in Sources */,
 				CD0F7E772C5469D5000D3009 /* SceneDelegate.swift in Sources */,
 				CD0F7EA72C546A20000D3009 /* MainPresenter.swift in Sources */,
 				CD0F7EAF2C546D46000D3009 /* ModuleBuilder.swift in Sources */,
+				CDC5EFBD2C549D1C005CE58E /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
