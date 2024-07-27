@@ -6,9 +6,9 @@
 //
 
 import XCTest
-@testable import TestProjectTSD
+@testable import MVP_Architecture
 
-final class TestProjectTSDTests: XCTestCase {
+final class MVP_ArchitectureTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
